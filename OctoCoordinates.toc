@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: OctoCoordinates
+## Version: 1.0
+## Notes: Display coordinates under the map
+## Author: I'm an octopus
+
+eCoordinates.lua
+eCoordinates.xml
