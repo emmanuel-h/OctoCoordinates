@@ -1,9 +1,9 @@
 local zone
 local TimeSinceLastUpdate = 0
+
 local function UpdateCoordinates(self, elapsed)
     if zone ~= GetRealZoneText() then
         zone = GetRealZoneText()
-        print("OctoCoordinates initialized")
     end
     TimeSinceLastUpdate = TimeSinceLastUpdate + elapsed
     if TimeSinceLastUpdate > .5 then
@@ -19,6 +19,7 @@ end
 function OctoCoordinates_OnLoad(self, event, ...)
     self:RegisterEvent("ADDON_LOADED")
 end
+
 function OctoCoordinates_OnEvent(self, event, ...)
     if (event == "ADDON_LOADED" and ... == "OctoCoordinates") then
         print("OctoCoordinates loaded")
