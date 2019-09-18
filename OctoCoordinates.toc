@@ -4,5 +4,5 @@
 ## Notes: Display coordinates under the map
 ## Author: I'm an octopus
 
-eCoordinates.lua
-eCoordinates.xml
+OctoCoordinates.lua
+OctoCoordinates.xml
