@@ -1,6 +1,6 @@
 ## Interface: 11302
 ## Title: OctoCoordinates
-## Version: 1.0
+## Version: 1.1
 ## Notes: Display coordinates under the map
 ## Author: I'm an octopus
 

@@ -2,11 +2,19 @@ local zone
 local TimeSinceLastUpdate = 0
 
 local function UpdateCoordinates(self, elapsed)
-    if zone ~= GetRealZoneText() then
-        zone = GetRealZoneText()
+    local newZone = GetRealZoneText()
+    local inInstance = IsInInstance()
+    if zone ~= newZone then
+        zone = newZone
+        if inInstance then
+            OctoCoordinatesFontString:SetText("|c00000000(--.--, --.--)")
+            print("Disable OctoCoordinates, you are in the instance", zone)
+        else
+            print("Initialize OctoCoordinates for zone", zone)
+        end
     end
     TimeSinceLastUpdate = TimeSinceLastUpdate + elapsed
-    if TimeSinceLastUpdate > .5 then
+    if TimeSinceLastUpdate > .5 and not inInstance then
         TimeSinceLastUpdate = 0
         local map = C_Map.GetBestMapForUnit("player")
         local position = C_Map.GetPlayerMapPosition(map, "player")
