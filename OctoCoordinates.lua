@@ -33,7 +33,7 @@ function OctoCoordinates_OnEvent(self, event, ...)
         print("OctoCoordinates loaded")
         self:UnregisterEvent("ADDON_LOADED")
         OctoCoordinates:SetSize(80, 25)
-        OctoCoordinates:SetPoint("TOP", "Minimap", "BOTTOM", 5, -15)
+        OctoCoordinates:SetPoint("TOP", "Minimap", "BOTTOM", 3, -15)
         OctoCoordinates:SetScript("OnUpdate", UpdateCoordinates)
         OctoCoordinates:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",
             edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
